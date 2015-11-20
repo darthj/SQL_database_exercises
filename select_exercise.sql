@@ -1,16 +1,21 @@
 USE codeup_test_db;
 
-SELECT 'Pink Floyd' AS 'Artist';
-SELECT * FROM albums WHERE artist = 'Pink Floyd';
+SELECT record AS 'Pink Floyd Albums'
+FROM albums 
+WHERE artist = 'Pink Floyd';
 
-SELECT 'Thriller' AS 'Year';
-SELECT release_date FROM albums WHERE record = 'Thriller';
+SELECT release_date AS 'Year Thriller was released'
+FROM albums
+WHERE record = 'Thriller';
 
-SELECT 'Pop' AS 'Genre';
-SELECT genre FROM albums WHERE record = 'Saturday Night Fever';
+SELECT genre AS 'Genre of Saturday Night Fever'
+FROM albums 
+WHERE record = 'Saturday Night Fever';
 
-SELECT '1990s' AS 'Decade';
-SELECT * FROM albums WHERE release_date >= '1990';
+SELECT record AS '1990s Albums'
+FROM albums 
+WHERE release_date >= '1990';
 
-SELECT	'Greater Than 20' AS 'Sales';
-SELECT * FROM albums WHERE sales >= '20';
+SELECT record, sales AS 'Sales Greater Than 20 million'
+FROM albums 
+WHERE sales >= 20;
