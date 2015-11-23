@@ -121,6 +121,10 @@ AND last_name NOT LIKE '%qu%';</string>
 		<string>SELECT *
 FROM employees
 WHERE last_name LIKE 'E%E'
+ORDER BY emp_no DESC</string>
+		<string>SELECT *
+FROM employees
+WHERE last_name LIKE 'E%E'
 ORDER BY emp_no</string>
 		<string>SELECT emp_no, first_name, last_name, gender
 FROM employees
