@@ -105,7 +105,8 @@ WHERE birth_date LIKE '%-12-25';
 
 SELECT emp_no, first_name, last_name
 FROM employees
-WHERE last_name LIKE '%q%';</string>
+WHERE last_name LIKE '%q%'
+AND last_name NOT LIKE '%qu%';</string>
 			<key>table</key>
 			<string>employees</string>
 			<key>view</key>
@@ -122,6 +123,20 @@ WHERE last_name LIKE '%q%';</string>
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>SELECT emp_no, first_name, last_name
+FROM employees
+WHERE last_name LIKE '%q%'
+AND last_name NOT LIKE '%qu%'</string>
+		<string>SELECT emp_no, first_name, last_name
+FROM employees
+WHERE last_name LIKE '%q%'
+AND NOT LIKE '%qu%'</string>
+		<string>SELECT emp_no, first_name, last_name
+FROM employees
+WHERE last_name LIKE '%q%'</string>
+		<string>SELECT emp_no, first_name, last_name
+FROM employees
+WHERE last_name LIKE '%q'</string>
 		<string>SELECT emp_no, first_name, last_name
 FROM employees
 WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
@@ -165,9 +180,6 @@ FROM employees
 WHERE first_name IN('Irena')
 OR first_name IN('Vidya')
 OR first_name('Maya')</string>
-		<string>SELECT emp_no, first_name, last_name
-FROM employees
-WHERE last_name LIKE '%q%'</string>
 		<string>SELECT emp_no, first_name, last_name
 FROM employees
 WHERE birth_date LIKE '%-12-25'</string>
