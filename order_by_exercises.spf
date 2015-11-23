@@ -86,9 +86,10 @@ OR first_name IN ('Maya')
 ORDER BY last_name, first_name;
 
 
-SELECT emp_no, first_name, last_name
+SELECT *
 FROM employees
-WHERE last_name LIKE 'E%E';
+WHERE last_name LIKE 'E%E'
+ORDER BY emp_no DESC;
 
 SELECT emp_no, first_name, last_name
 FROM employees
@@ -117,6 +118,10 @@ AND last_name NOT LIKE '%qu%';</string>
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>SELECT *
+FROM employees
+WHERE last_name LIKE 'E%E'
+ORDER BY emp_no</string>
 		<string>SELECT emp_no, first_name, last_name, gender
 FROM employees
 WHERE gender IN('M')
