@@ -87,11 +87,14 @@
 FROM titles
 ORDER BY title;
 
+SELECT first_name, last_name
+FROM employees
+WHERE last_name LIKE 'E%E';
+
 SELECT DISTINCT last_name
 FROM employees
-WHERE last_name LIKE 'E%E'
-GROUP BY last_name;
-</string>
+WHERE last_name LIKE '%q%'
+AND last_name NOT LIKE '%qu%';</string>
 			<key>table</key>
 			<string>titles</string>
 			<key>view</key>
@@ -108,6 +111,32 @@ GROUP BY last_name;
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>SELECT DISTINCT last_name
+FROM employees
+WHERE last_name LIKE '%q%'
+AND last_name NOT LIKE '%qu%'</string>
+		<string>SELECT first_name, last_name
+FROM employees
+WHERE last_name LIKE 'E%E'</string>
+		<string>SELECT first_name, last_name
+FROM employees
+WHERE last_name LIKE 'E%E'
+GROUP BY last_name</string>
+		<string>SELECT *
+FROM employees
+WHERE last_name LIKE 'E%E'
+OR  first_name LIKE 'E%E'
+GROUP BY last_name</string>
+		<string>SELECT DISTINCT last_name
+FROM employees
+WHERE last_name LIKE 'E%E'
+OR  first_name LIKE 'E%E'
+GROUP BY last_name</string>
+		<string>SELECT DISTINCT last_name
+FROM employees
+WHERE last_name LIKE 'E%E'
+AND first_name LIKE 'E%E'
+GROUP BY last_name</string>
 		<string>SELECT DISTINCT last_name
 FROM employees
 WHERE last_name LIKE 'E%E'
@@ -168,13 +197,6 @@ OR first_name IN('Vidya')
 OR first_name IN ('Maya')
 )
 ORDER BY first_name</string>
-		<string>SELECT emp_no, first_name, last_name
-FROM employees
-WHERE first_name IN('Irena', 'Vidya', 'Maya')</string>
-		<string>SELECT first_name
-FROM employees
-WHERE first_name LIKE '%sus%'</string>
-		<string>SELECT * FROM departments</string>
 	</array>
 	<key>rdbms_type</key>
 	<string>mysql</string>
