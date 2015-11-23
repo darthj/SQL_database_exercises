@@ -84,7 +84,8 @@
 			<true/>
 			<key>queries</key>
 			<string>SELECT DISTINCT title
-FROM titles;</string>
+FROM titles
+ORDER BY title;</string>
 			<key>table</key>
 			<string>titles</string>
 			<key>view</key>
@@ -101,6 +102,18 @@ FROM titles;</string>
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>SELECT DISTINCT title
+FROM titles
+ORDER BY title</string>
+		<string>SELECT DISTINCT titles
+FROM titles
+ORDER BY titles</string>
+		<string>SELECT *
+FROM titles
+ORDER BY titles</string>
+		<string>SELECT DISTINCT title
+FROM titles
+ORDER BY titles</string>
 		<string>SELECT DISTINCT title
 FROM titles</string>
 		<string>SELECT DISTINCT 'titles'
