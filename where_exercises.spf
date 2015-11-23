@@ -84,7 +84,11 @@
 			<key>queries</key>
 			<string>SELECT emp_no, first_name, last_name
 FROM employees
-WHERE first_name IN('Irena', 'Vidya', 'Maya');</string>
+WHERE first_name IN('Irena', 'Vidya', 'Maya');
+
+SELECT emp_no, first_name, last_name
+FROM employees
+WHERE last_name LIKE 'E%';</string>
 			<key>table</key>
 			<string>employees</string>
 			<key>view</key>
@@ -101,6 +105,9 @@ WHERE first_name IN('Irena', 'Vidya', 'Maya');</string>
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>SELECT emp_no, first_name, last_name
+FROM employees
+WHERE last_name LIKE 'E%'</string>
 		<string>SELECT emp_no, first_name, last_name
 FROM employees
 WHERE first_name IN('Irena', 'Vidya', 'Maya')</string>
