@@ -83,15 +83,29 @@
 			<key>isToolbarVisible</key>
 			<true/>
 			<key>queries</key>
-			<string>SELECT DISTINCT title
-FROM titles
-ORDER BY title;
-
-SELECT first_name, last_name
+			<string>SELECT emp_no, first_name, last_name, gender
 FROM employees
-WHERE last_name LIKE 'E%E';
+WHERE gender IN('M')
+AND (first_name IN('Irena')
+OR first_name IN('Vidya')
+OR first_name IN ('Maya')
+);
 
-SELECT DISTINCT last_name
+SELECT emp_no, first_name, last_name
+FROM employees
+WHERE last_name LIKE 'E%E'
+GROUP BY first_name, last_name;
+
+SELECT emp_no, first_name, last_name
+FROM employees
+WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
+AND birth_date LIKE '%-12-25';
+
+SELECT emp_no, first_name, last_name
+FROM employees
+WHERE birth_date LIKE '%-12-25';
+
+SELECT emp_no, first_name, last_name
 FROM employees
 WHERE last_name LIKE '%q%'
 AND last_name NOT LIKE '%qu%';</string>
@@ -111,6 +125,13 @@ AND last_name NOT LIKE '%qu%';</string>
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>SELECT emp_no, first_name, last_name
+FROM employees
+WHERE last_name LIKE 'E%E'
+GROUP BY first_name, last_name</string>
+		<string>SELECT emp_no, first_name, last_name
+FROM employees
+WHERE last_name LIKE 'E%E'</string>
 		<string>SELECT DISTINCT last_name
 FROM employees
 WHERE last_name LIKE '%q%'
@@ -181,22 +202,6 @@ OR first_name IN('Vidya')
 OR first_name IN ('Maya')
 )
 ORDER BY last_name, first_name</string>
-		<string>SELECT emp_no, first_name, last_name, gender
-FROM employees
-WHERE gender IN('M')
-AND (first_name IN('Irena')
-OR first_name IN('Vidya')
-OR first_name IN ('Maya')
-)
-ORDER BY first_name, last_name</string>
-		<string>SELECT emp_no, first_name, last_name, gender
-FROM employees
-WHERE gender IN('M')
-AND (first_name IN('Irena')
-OR first_name IN('Vidya')
-OR first_name IN ('Maya')
-)
-ORDER BY first_name</string>
 	</array>
 	<key>rdbms_type</key>
 	<string>mysql</string>
