@@ -85,7 +85,13 @@
 			<key>queries</key>
 			<string>SELECT DISTINCT title
 FROM titles
-ORDER BY title;</string>
+ORDER BY title;
+
+SELECT DISTINCT last_name
+FROM employees
+WHERE last_name LIKE 'E%E'
+GROUP BY last_name;
+</string>
 			<key>table</key>
 			<string>titles</string>
 			<key>view</key>
@@ -102,6 +108,26 @@ ORDER BY title;</string>
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>SELECT DISTINCT last_name
+FROM employees
+WHERE last_name LIKE 'E%E'
+GROUP BY last_name</string>
+		<string>SELECT DISTINCT last_name
+FROM employees
+WHERE last_name LIKE 'E%E'
+GROUP BY last_name ASC</string>
+		<string>SELECT DISTINCT last_name
+FROM employees
+WHERE last_name LIKE 'E%E'
+GROUP BY first_name ASC</string>
+		<string>SELECT DISTINCT last_name
+FROM employees
+WHERE last_name LIKE 'E%E'
+GROUP BY first_name DESC</string>
+		<string>SELECT DISTINCT last_name
+FROM employees
+WHERE last_name LIKE 'E%E'
+GROUP BY first_name</string>
 		<string>SELECT DISTINCT title
 FROM titles
 ORDER BY title</string>
