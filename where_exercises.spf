@@ -53,8 +53,6 @@
 		<dict>
 			<key>connectionEncoding</key>
 			<string>utf8</string>
-			<key>contentFilter</key>
-			<dict/>
 			<key>contentPageNumber</key>
 			<integer>1</integer>
 			<key>contentSelection</key>
@@ -78,13 +76,15 @@
 			<key>contentSortColIsAsc</key>
 			<true/>
 			<key>contentViewport</key>
-			<string>{{0, 0}, {757, 329}}</string>
+			<string>{{0, 0}, {694, 456}}</string>
 			<key>isToolbarVisible</key>
 			<true/>
 			<key>queries</key>
 			<string>SELECT emp_no, first_name, last_name
 FROM employees
-WHERE first_name IN('Irena', 'Vidya', 'Maya');
+WHERE first_name IN('Irena')
+OR first_name IN('Vidya')
+OR first_name IN ('Maya');
 
 SELECT emp_no, first_name, last_name
 FROM employees
@@ -117,6 +117,16 @@ WHERE last_name LIKE '%q%';</string>
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>SELECT emp_no, first_name, last_name
+FROM employees
+WHERE first_name IN('Irena')
+OR first_name IN('Vidya')
+OR first_name IN ('Maya')</string>
+		<string>SELECT emp_no, first_name, last_name
+FROM employees
+WHERE first_name IN('Irena')
+OR first_name IN('Vidya')
+OR first_name('Maya')</string>
 		<string>SELECT emp_no, first_name, last_name
 FROM employees
 WHERE last_name LIKE '%q%'</string>
