@@ -1,4 +1,6 @@
- USE codeup_test_db;
+USE codeup_test_db;
+
+TRUNCATE albums;
 
 INSERT INTO albums (artist, record, release_date, sales, genre)
 VALUES ('Michael Jackson','Thriller','1982','43.3','pop'),
@@ -11,5 +13,7 @@ VALUES ('Michael Jackson','Thriller','1982','43.3','pop'),
 ('Fleetwood Mac','Rumours', '1977', '27.9','soft rock'),
 ('Shania Twain', 'Come On Over','1997','29.6','country'),
 ('Led Zeppelin', 'Led Zeppelin IV', '1971','29','hard rock');
+
+
 
 
