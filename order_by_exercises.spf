@@ -91,10 +91,11 @@ FROM employees
 WHERE last_name LIKE 'E%E'
 ORDER BY emp_no DESC;
 
-SELECT emp_no, first_name, last_name
+SELECT *
 FROM employees
 WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
-AND birth_date LIKE '%-12-25';
+AND birth_date LIKE '%-12-25'
+ORDER BY birth_date, hire_date DESC;
 
 SELECT emp_no, first_name, last_name
 FROM employees
@@ -118,6 +119,41 @@ AND last_name NOT LIKE '%qu%';</string>
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>SELECT *
+FROM employees
+WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
+AND birth_date LIKE '%-12-25'
+ORDER BY birth_date, hire_date DESC</string>
+		<string>SELECT *
+FROM employees
+WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
+AND birth_date LIKE '%-12-25'
+ORDER BY birth_date DESC, hire_date DESC</string>
+		<string>SELECT *
+FROM employees
+WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
+AND birth_date LIKE '%-12-25'
+ORDER BY birth_date DESC, hire_date ASC</string>
+		<string>SELECT *
+FROM employees
+WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
+AND birth_date LIKE '%-12-25'
+ORDER BY birth_date DESC, hire_date</string>
+		<string>SELECT emp_no, first_name, last_name
+FROM employees
+WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
+AND birth_date LIKE '%-12-25'
+ORDER BY birth_date DESC, hire_date</string>
+		<string>SELECT emp_no, first_name, last_name
+FROM employees
+WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
+AND birth_date LIKE '%-12-25'
+ORDER BY birth_date DESC, hire_date DESC</string>
+		<string>SELECT emp_no, first_name, last_name
+FROM employees
+WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
+AND birth_date LIKE '%-12-25'
+ORDER BY birth_date, hire_date</string>
 		<string>SELECT *
 FROM employees
 WHERE last_name LIKE 'E%E'
