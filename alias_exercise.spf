@@ -76,7 +76,7 @@
 			<key>isToolbarVisible</key>
 			<true/>
 			<key>queries</key>
-			<string>SELECT CONCAT(last_name, ' ', first_name) AS 'Full Name', birth_date AS 'DOB'
+			<string>SELECT CONCAT(emp_no, ' - ', last_name, ', ', first_name) AS 'FULL NAME', birth_date AS 'DOB'
 FROM employees
 LIMIT 10;</string>
 			<key>view</key>
@@ -93,6 +93,15 @@ LIMIT 10;</string>
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>SELECT CONCAT(emp_no, ' - ', last_name, ', ', first_name) AS 'FULL NAME', birth_date AS 'DOB'
+FROM employees
+LIMIT 10</string>
+		<string>SELECT CONCAT(emp_no, '-', last_name, ', ', first_name) AS 'FULL NAME', birth_date AS 'DOB'
+FROM employees
+LIMIT 10</string>
+		<string>SELECT CONCAT(emp_no, '-', last_name, ' ', first_name) AS 'FULL NAME', birth_date AS 'DOB'
+FROM employees
+LIMIT 10</string>
 		<string>SELECT CONCAT(last_name, ' ', first_name) AS 'Full Name', birth_date AS 'DOB'
 FROM employees
 LIMIT 10</string>
