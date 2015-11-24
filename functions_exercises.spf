@@ -82,7 +82,7 @@ WHERE first_name IN('Irena','Vidya','Maya')
 GROUP BY gender;
 
 
-SELECT *
+SELECT concat(first_name,last_name)
 FROM employees
 WHERE last_name LIKE 'E%E'
 ORDER BY emp_no DESC;
@@ -115,6 +115,10 @@ AND last_name NOT LIKE '%qu%';</string>
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>SELECT concat(first_name,last_name)
+FROM employees
+WHERE last_name LIKE 'E%E'
+ORDER BY emp_no DESC</string>
 		<string>SELECT COUNT(gender), gender
 FROM employees
 WHERE first_name IN('Irena','Vidya','Maya')
