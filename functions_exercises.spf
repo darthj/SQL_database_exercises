@@ -97,7 +97,7 @@ SELECT emp_no, first_name, last_name
 FROM employees
 WHERE birth_date LIKE '%-12-25';
 
-SELECT COUNT(last_name),first_name, last_name
+SELECT concat(first_name,' ', last_name) AS full_name, COUNT(last_name)
 FROM employees
 WHERE last_name LIKE '%q%'
 AND last_name NOT LIKE '%qu%'
@@ -117,12 +117,37 @@ ORDER BY count(last_name) DESC;</string>
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>SELECT concat(first_name,' ', last_name) AS full_name, COUNT(last_name)
+FROM employees
+WHERE last_name LIKE '%q%'
+AND last_name NOT LIKE '%qu%'
+GROUP BY first_name, last_name
+ORDER BY count(last_name) DESC</string>
+		<string>SELECT COUNT(last_name),concat(first_name,' ', last_name) AS full_name
+FROM employees
+WHERE last_name LIKE '%q%'
+AND last_name NOT LIKE '%qu%'
+GROUP BY first_name, last_name
+ORDER BY count(last_name) DESC</string>
 		<string>SELECT COUNT(last_name),first_name, last_name
 FROM employees
 WHERE last_name LIKE '%q%'
 AND last_name NOT LIKE '%qu%'
 GROUP BY first_name, last_name
 ORDER BY count(last_name) DESC</string>
+		<string>SELECT DATEDIFF(NOW(),hire_date) AS 'DAYS WORKING AT FIRM', first_name, last_name, hire_date
+FROM employees
+WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
+AND birth_date LIKE '%-12-25'
+ORDER BY  hire_date</string>
+		<string>SELECT concat(first_name,last_name)
+FROM employees
+WHERE last_name LIKE 'E%E'
+ORDER BY emp_no DESC</string>
+		<string>SELECT COUNT(gender), gender
+FROM employees
+WHERE first_name IN('Irena','Vidya','Maya')
+GROUP BY gender</string>
 		<string>SELECT COUNT(last_name),first_name, last_name
 FROM employees
 WHERE last_name LIKE '%q%'
@@ -139,11 +164,6 @@ FROM employees
 WHERE last_name LIKE '%q%'
 AND last_name NOT LIKE '%qu%'
 ORDER BY first_name</string>
-		<string>SELECT DATEDIFF(NOW(),hire_date) AS 'DAYS WORKING AT FIRM', first_name, last_name, hire_date
-FROM employees
-WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
-AND birth_date LIKE '%-12-25'
-ORDER BY  hire_date</string>
 		<string>SELECT COUNT(last_name),first_name, last_name
 FROM employees
 WHERE last_name LIKE '%q%'
@@ -199,23 +219,6 @@ FROM employees
 WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
 AND birth_date LIKE '%-12-25'
 ORDER BY birth_date, hire_date DESC</string>
-		<string>SELECT DATEDIFF(hire_date, NOW())
-FROM employees
-WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
-AND birth_date LIKE '%-12-25'
-ORDER BY birth_date, hire_date DESC</string>
-		<string>SELECT concat(first_name,last_name)
-FROM employees
-WHERE last_name LIKE 'E%E'
-ORDER BY emp_no DESC</string>
-		<string>SELECT COUNT(gender), gender
-FROM employees
-WHERE first_name IN('Irena','Vidya','Maya')
-GROUP BY gender</string>
-		<string>SELECT COUNT(gender)
-FROM employees
-WHERE first_name IN('Irena','Vidya','Maya')
-GROUP BY gender</string>
 	</array>
 	<key>rdbms_type</key>
 	<string>mysql</string>

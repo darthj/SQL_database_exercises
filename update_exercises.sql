@@ -9,9 +9,9 @@ SELECT record AS 'Albums B4 1980'
 FROM albums
 WHERE release_date <= 1980;
 
--- UPDATE albums
--- SET release_date = (release_date - 100)
--- WHERE release_date <= 1980; after setting albums_migration to INT from YEAR
+UPDATE albums
+SET 'release_date' = DATE_SUB('release_date', INTERVAL 100 YEAR)
+WHERE 'release_date' < TIMESTAMP('1980-01-01'); 
 
 SELECT record AS 'Michael Jackson Albums'
 FROM albums
