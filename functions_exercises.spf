@@ -87,11 +87,11 @@ FROM employees
 WHERE last_name LIKE 'E%E'
 ORDER BY emp_no DESC;
 
-SELECT *
+SELECT DATEDIFF(NOW(),hire_date) AS 'DAYS WORKING AT FIRM', first_name, last_name, hire_date
 FROM employees
 WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
 AND birth_date LIKE '%-12-25'
-ORDER BY birth_date, hire_date DESC;
+ORDER BY  hire_date;
 
 SELECT emp_no, first_name, last_name
 FROM employees
@@ -115,6 +115,46 @@ AND last_name NOT LIKE '%qu%';</string>
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>SELECT DATEDIFF(NOW(),hire_date) AS 'DAYS WORKING AT FIRM', first_name, last_name, hire_date
+FROM employees
+WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
+AND birth_date LIKE '%-12-25'
+ORDER BY  hire_date</string>
+		<string>SELECT DATEDIFF(NOW(),hire_date) AS 'DAYS WORKING AT FIRM', first_name, last_name, hire_date
+FROM employees
+WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
+AND birth_date LIKE '%-12-25'
+ORDER BY  hire_date DESC</string>
+		<string>SELECT DATEDIFF(NOW(),hire_date) AS 'DAYS WORKING AT FIRM', first_name, last_name
+FROM employees
+WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
+AND birth_date LIKE '%-12-25'
+ORDER BY  DATEDIFF() DESC</string>
+		<string>SELECT DATEDIFF(NOW(),hire_date) AS 'DAYS WORKING AT FIRM', first_name, last_name
+FROM employees
+WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
+AND birth_date LIKE '%-12-25'
+ORDER BY 'DAYS WORKING AT FIRM' DESC</string>
+		<string>SELECT DATEDIFF(NOW(),hire_date) AS 'DAYS WORKING AT FIRM', first_name, last_name
+FROM employees
+WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
+AND birth_date LIKE '%-12-25'
+ORDER BY hire_date DESC</string>
+		<string>SELECT DATEDIFF(NOW(),hire_date), first_name, last_name
+FROM employees
+WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
+AND birth_date LIKE '%-12-25'
+ORDER BY hire_date DESC</string>
+		<string>SELECT DATEDIFF(NOW(),hire_date)
+FROM employees
+WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
+AND birth_date LIKE '%-12-25'
+ORDER BY birth_date, hire_date DESC</string>
+		<string>SELECT DATEDIFF(hire_date, NOW())
+FROM employees
+WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
+AND birth_date LIKE '%-12-25'
+ORDER BY birth_date, hire_date DESC</string>
 		<string>SELECT concat(first_name,last_name)
 FROM employees
 WHERE last_name LIKE 'E%E'
@@ -168,45 +208,6 @@ FROM employees
 WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
 AND birth_date LIKE '%-12-25'
 ORDER BY birth_date, hire_date</string>
-		<string>SELECT *
-FROM employees
-WHERE last_name LIKE 'E%E'
-ORDER BY emp_no DESC</string>
-		<string>SELECT *
-FROM employees
-WHERE last_name LIKE 'E%E'
-ORDER BY emp_no</string>
-		<string>SELECT emp_no, first_name, last_name, gender
-FROM employees
-WHERE gender IN('M')
-AND (first_name IN('Irena')
-OR first_name IN('Vidya')
-OR first_name IN ('Maya')
-)
-ORDER BY last_name, first_name</string>
-		<string>SELECT emp_no, first_name, last_name, gender
-FROM employees
-WHERE gender IN('M')
-AND (first_name IN('Irena')
-OR first_name IN('Vidya')
-OR first_name IN ('Maya')
-)
-ORDER BY first_name, last_name</string>
-		<string>SELECT emp_no, first_name, last_name, gender
-FROM employees
-WHERE gender IN('M')
-AND (first_name IN('Irena')
-OR first_name IN('Vidya')
-OR first_name IN ('Maya')
-)
-ORDER BY first_name</string>
-		<string>SELECT emp_no, first_name, last_name
-FROM employees
-WHERE first_name IN('Irena', 'Vidya', 'Maya')</string>
-		<string>SELECT first_name
-FROM employees
-WHERE first_name LIKE '%sus%'</string>
-		<string>SELECT * FROM departments</string>
 	</array>
 	<key>rdbms_type</key>
 	<string>mysql</string>
