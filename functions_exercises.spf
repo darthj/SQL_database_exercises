@@ -97,10 +97,12 @@ SELECT emp_no, first_name, last_name
 FROM employees
 WHERE birth_date LIKE '%-12-25';
 
-SELECT emp_no, first_name, last_name
+SELECT COUNT(last_name),first_name, last_name
 FROM employees
 WHERE last_name LIKE '%q%'
-AND last_name NOT LIKE '%qu%';</string>
+AND last_name NOT LIKE '%qu%'
+GROUP BY first_name, last_name
+ORDER BY count(last_name) DESC;</string>
 			<key>view</key>
 			<string>SP_VIEW_CUSTOMQUERY</string>
 			<key>windowVerticalDividerPosition</key>
@@ -115,11 +117,58 @@ AND last_name NOT LIKE '%qu%';</string>
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>SELECT COUNT(last_name),first_name, last_name
+FROM employees
+WHERE last_name LIKE '%q%'
+AND last_name NOT LIKE '%qu%'
+GROUP BY first_name, last_name
+ORDER BY count(last_name) DESC</string>
+		<string>SELECT COUNT(last_name),first_name, last_name
+FROM employees
+WHERE last_name LIKE '%q%'
+AND last_name NOT LIKE '%qu%'
+GROUP BY first_name, last_name
+ORDER BY count(last_name)</string>
+		<string>SELECT COUNT(last_name),first_name, last_name
+FROM employees
+WHERE last_name LIKE '%q%'
+AND last_name NOT LIKE '%qu%'
+GROUP BY first_name, last_name</string>
+		<string>SELECT COUNT(last_name),first_name, last_name
+FROM employees
+WHERE last_name LIKE '%q%'
+AND last_name NOT LIKE '%qu%'
+ORDER BY first_name</string>
 		<string>SELECT DATEDIFF(NOW(),hire_date) AS 'DAYS WORKING AT FIRM', first_name, last_name, hire_date
 FROM employees
 WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
 AND birth_date LIKE '%-12-25'
 ORDER BY  hire_date</string>
+		<string>SELECT COUNT(last_name),first_name, last_name
+FROM employees
+WHERE last_name LIKE '%q%'
+AND last_name NOT LIKE '%qu%'
+GROUP BY last_name, first_name</string>
+		<string>SELECT COUNT(last_name),first_name, last_name, emp_no
+FROM employees
+WHERE last_name LIKE '%q%'
+AND last_name NOT LIKE '%qu%'
+GROUP BY last_name, first_name</string>
+		<string>SELECT first_name, last_name
+FROM employees
+WHERE last_name LIKE '%q%'
+AND last_name NOT LIKE '%qu%'
+GROUP BY last_name, first_name</string>
+		<string>SELECT emp_no, first_name, last_name
+FROM employees
+WHERE last_name LIKE '%q%'
+AND last_name NOT LIKE '%qu%'
+GROUP BY last_name, first_name</string>
+		<string>SELECT emp_no, first_name, last_name
+FROM employees
+WHERE last_name LIKE '%q%'
+AND last_name NOT LIKE '%qu%'
+GROUP BY first_name, last_name</string>
 		<string>SELECT DATEDIFF(NOW(),hire_date) AS 'DAYS WORKING AT FIRM', first_name, last_name, hire_date
 FROM employees
 WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
@@ -167,47 +216,6 @@ GROUP BY gender</string>
 FROM employees
 WHERE first_name IN('Irena','Vidya','Maya')
 GROUP BY gender</string>
-		<string>SELECT COUNT(gender)
-FROM employees
-WHERE first_name IN('Irena','Vidya','Maya')</string>
-		<string>SELECT COUNT(DISTINCT(gender))
-FROM employees
-WHERE first_name IN('Irena','Vidya','Maya')</string>
-		<string>SELECT *
-FROM employees
-WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
-AND birth_date LIKE '%-12-25'
-ORDER BY birth_date, hire_date DESC</string>
-		<string>SELECT *
-FROM employees
-WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
-AND birth_date LIKE '%-12-25'
-ORDER BY birth_date DESC, hire_date DESC</string>
-		<string>SELECT *
-FROM employees
-WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
-AND birth_date LIKE '%-12-25'
-ORDER BY birth_date DESC, hire_date ASC</string>
-		<string>SELECT *
-FROM employees
-WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
-AND birth_date LIKE '%-12-25'
-ORDER BY birth_date DESC, hire_date</string>
-		<string>SELECT emp_no, first_name, last_name
-FROM employees
-WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
-AND birth_date LIKE '%-12-25'
-ORDER BY birth_date DESC, hire_date</string>
-		<string>SELECT emp_no, first_name, last_name
-FROM employees
-WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
-AND birth_date LIKE '%-12-25'
-ORDER BY birth_date DESC, hire_date DESC</string>
-		<string>SELECT emp_no, first_name, last_name
-FROM employees
-WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
-AND birth_date LIKE '%-12-25'
-ORDER BY birth_date, hire_date</string>
 	</array>
 	<key>rdbms_type</key>
 	<string>mysql</string>
