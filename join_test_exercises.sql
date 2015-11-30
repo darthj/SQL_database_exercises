@@ -40,3 +40,9 @@ SELECT r.name, count(u.`name`) AS User_no
 FROM users AS u
 JOIN roles AS r ON u.role_id = r.id
 GROUP BY r.name;
+
+SELECT d.dept_name, CONCAT(e.first_name, ' ', e.last_name) AS full_name
+FROM `dept_manager` AS dm
+JOIN `departments` AS d ON dm.dept_no = d.dept_no
+JOIN `employees` AS e ON dm.emp_no = e.emp_no
+WHERE dm.to_date > now();
