@@ -101,7 +101,7 @@ SELECT concat(first_name,' ', last_name) AS full_name, COUNT(last_name)
 FROM employees
 WHERE last_name LIKE '%q%'
 AND last_name NOT LIKE '%qu%'
-GROUP BY first_name, last_name
+GROUP BY full_name
 ORDER BY count(last_name) DESC;</string>
 			<key>view</key>
 			<string>SP_VIEW_CUSTOMQUERY</string>
@@ -117,6 +117,12 @@ ORDER BY count(last_name) DESC;</string>
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>SELECT concat(first_name,' ', last_name) AS full_name, COUNT(last_name)
+FROM employees
+WHERE last_name LIKE '%q%'
+AND last_name NOT LIKE '%qu%'
+GROUP BY full_name
+ORDER BY count(last_name) DESC</string>
 		<string>SELECT concat(first_name,' ', last_name) AS full_name, COUNT(last_name)
 FROM employees
 WHERE last_name LIKE '%q%'
@@ -214,11 +220,6 @@ FROM employees
 WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
 AND birth_date LIKE '%-12-25'
 ORDER BY hire_date DESC</string>
-		<string>SELECT DATEDIFF(NOW(),hire_date)
-FROM employees
-WHERE hire_date BETWEEN '1990-01-01'AND '1999-12-31'
-AND birth_date LIKE '%-12-25'
-ORDER BY birth_date, hire_date DESC</string>
 	</array>
 	<key>rdbms_type</key>
 	<string>mysql</string>
