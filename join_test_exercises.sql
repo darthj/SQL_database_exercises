@@ -56,3 +56,11 @@ WHERE t.to_date > now()
 AND d.dept_name LIKE 'Customer Service'
 AND de.to_date > now()
 GROUP BY t.title;
+
+SELECT d.dept_name, CONCAT(e.first_name, ' ', e.last_name) AS full_name, s.salary
+FROM dept_manager AS dm
+JOIN departments AS d ON dm.dept_no = d.dept_no
+JOIN employees AS e ON dm.emp_no = e.emp_no
+JOIN salaries AS s ON dm.emp_no = s.emp_no
+WHERE dm.to_date > now()
+AND s.to_date > now();
