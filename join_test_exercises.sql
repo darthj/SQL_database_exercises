@@ -64,3 +64,14 @@ JOIN employees AS e ON dm.emp_no = e.emp_no
 JOIN salaries AS s ON dm.emp_no = s.emp_no
 WHERE dm.to_date > now()
 AND s.to_date > now();
+
+SELECT CONCAT(e.first_name, ' ', e.last_name) AS EE_NAME,
+	d.dept_name AS Department,
+	CONCAT(manager.first_name, ' ', manager.last_name) AS Manager 
+FROM employees AS e
+JOIN dept_emp AS de ON e.emp_no = de.emp_no
+JOIN departments AS d ON de.dept_no = d.dept_no
+JOIN dept_manager AS dm ON de.dept_no = dm.dept_no
+JOIN employees AS manager ON dm.emp_no = manager.emp_no
+WHERE de.to_date > now()
+AND dm.to_date > now();
