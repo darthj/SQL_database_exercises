@@ -35,3 +35,8 @@ INSERT INTO users (NAME, email, role_id) VALUES
 SELECT *
 FROM users
 JOIN roles ON users.role_id = roles.id;
+
+SELECT r.name, count(u.`name`) AS User_no
+FROM users AS u
+JOIN roles AS r ON u.role_id = r.id
+GROUP BY r.name;
