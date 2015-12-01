@@ -15,18 +15,14 @@ WHERE emp_no IN(
 )
 AND to_date > now();
 
-SELECT CONCAT(first_name, ' ', last_name) AS NAMES
+SELECT CONCAT(first_name, ' ', last_name) AS NAMES, gender
 FROM employees
 WHERE emp_no IN(
 	SELECT emp_no
 	FROM dept_manager
-	WHERE gender IN(
-		SELECT gender
-		FROM employees
-		WHERE gender = 'F'
-	)
-	AND to_date > now()
-);
+	WHERE to_date > now()
+)
+AND gender = 'F';
 
 SELECT dept_name AS Departments
 FROM departments
