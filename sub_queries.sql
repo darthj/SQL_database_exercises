@@ -36,11 +36,7 @@ WHERE dept_no IN(
 	WHERE emp_no IN(
 		SELECT emp_no
 		FROM employees
-		WHERE gender IN(
-			SELECT gender
-			FROM employees
-			WHERE gender = 'F'
-		)
+		WHERE gender ='F'
 	)
 	AND to_date > now()
 );
